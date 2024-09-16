@@ -1,0 +1,73 @@
+
+POST http://localhost:3000/job
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJBYnV6IiwiaWF0IjoxNzI2NDY3NTgwLCJleHAiOjE3MjY0NzExODB9.inWru-_14dFg86TuzSppyD8aTaZ2mUMR2Im6fF0Q35g
+
+{
+  "perusahaan": "PT Abuz",
+  "lokasi": "Jakarta",
+  "posisi": "Software Engineer",
+  "tanggal_lamar": "2024-09-16",
+  "tanggal_batas_lamaran": "2024-09-30",
+  "platform": "LinkedIn",
+  "status_lamar": "Interview Scheduled",
+  "keterangan": "Good candidate",
+  "link": "http://example.com"
+}
+
+
+###
+GET http://localhost:3000/job
+Content-Type:  application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJBYnUiLCJpYXQiOjE3MjY0Njc1MTYsImV4cCI6MTcyNjQ3MTExNn0.e-NnwZ-JwPAcg5BW5uZAwVLGmFrDJOEP4kDPfb1MRDE
+
+###
+PATCH http://localhost:3000/job/1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJBYnUiLCJpYXQiOjE3MjY0Njc1MTYsImV4cCI6MTcyNjQ3MTExNn0.e-NnwZ-JwPAcg5BW5uZAwVLGmFrDJOEP4kDPfb1MRDE
+
+{
+  "perusahaan": "PT Example update",
+  "lokasi": "Jakarta selatan",
+  "posisi": "Software Developer",
+  "tanggal_lamar": "2024-09-16",
+  "tanggal_batas_lamaran": "2024-09-30",
+  "platform": "Jobsteret",
+  "status_lamar": "Interview Scheduled",
+  "keterangan": "Good candidate",
+  "link": "http://example.com"
+}
+###
+PATCH http://localhost:3000/job/status/1
+content-type: application/json
+
+{
+  "status_lamar": "Interview",
+}
+
+###
+DELETE  http://localhost:3000/job/2
+
+###
+GET http://localhost:3000/auth/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywidXNlcm5hbWUiOiJ0ZXN0MiIsImlhdCI6MTcyNjQ2Mzc2OSwiZXhwIjoxNzI2NDY3MzY5fQ.52xQiJOqFaGTPEMOfjrMEyndgJCLDIdaLwL1nEil5y4
+
+###
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+  "username": "Abuz",
+  "password": "Telkomsel45"
+}
+
+
+###
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "Abuz",
+    "password": "Telkomsel45"
+}
+
