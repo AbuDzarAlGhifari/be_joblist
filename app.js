@@ -15,7 +15,7 @@ const app = express();
 // Use CORS middleware
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://fe-joblist.vercel.app/',
     methods: ['GET', 'POST', 'PATCH', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
   })
