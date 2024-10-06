@@ -46,7 +46,7 @@ content-type: application/json
 }
 
 ###
-DELETE  http://localhost:3000/job/2
+DELETE  http://localhost:5000/job/19
 
 ###
 GET http://localhost:3000/auth/users
@@ -57,8 +57,10 @@ POST http://localhost:5000/auth/register
 Content-Type: application/json
 
 {
-  "username": "abuz",
-  "password": "Telkomsel45"
+  "username": "abuza",
+  "email": "abuz@gmail.com",
+  "password": "Telkomsel45",
+  "conff_password": "Telkomsel45"
 }
 
 
@@ -67,7 +69,7 @@ POST http://localhost:5000/auth/login
 Content-Type: application/json
 
 {
-    "username": "Abuz",
-    "password": "Telkomsel45"
+    "username": "test",
+    "password": "password"
 }
 
